@@ -15,7 +15,7 @@ pipeline {
         }
         stage('tag') {
             steps {
-                bat 'docker tag  hello_java_jenkins_docker_image yogitachourey/hello_java_jenkins_docker_image:%BUILD_ID%'
+                bat 'docker tag  hello_java_jenkins_docker_image:%BUILD_ID% yogitachourey/hello_java_jenkins_docker_image:%BUILD_ID%'
 
             }
         }
