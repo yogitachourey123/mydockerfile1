@@ -1,8 +1,10 @@
 FROM openjdk
 
-ADD /c/Users/lcr80102/Jenkinsfile /c/Users/lcr80102/mydockerfile1
+ADD . mydockerfile1 
 
-COPY /c/Users/lcr80102/mydockerfile1 D:\DEMO_DOCKERFILE_JAVA
+COPY . D:\DEMO_DOCKERFILE_JAVA
+
+WORKDIR mydockerfile1
 
 RUN javac Hello.java
 
